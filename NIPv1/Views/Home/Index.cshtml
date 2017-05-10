@@ -1,0 +1,45 @@
+﻿@model IEnumerable<NIPv1.Models.Stat>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Wyszukiwarka</h1>
+    <p class="lead">Niniejsza wyszukiwarka ma na celu przeglądanie bazy danych przy pomocy numeru NIP, KRS lub REGON.</p>
+</div>
+<div class="body-content">
+    
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NIP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KRS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REGON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.counter)
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NIP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KRS)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.REGON)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.counter)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
