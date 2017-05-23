@@ -1,20 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace NIPv1.Models
 {
     public class Data
     {
-        public int ID { get; set; }
+        [Key]
+        public int CompanyId { get; set; }
+
+        [StringLength(10, MinimumLength = 10)]
         public string NIP { get; set; }
+
+        [StringLength(10, MinimumLength = 10)]
         public string KRS { get; set; }
+
+        [StringLength(10, MinimumLength = 10)]
         public string REGON { get; set; }
-        public string nazwa { get; set; }
-        public string ulica { get; set; }
-        public int nr_domu { get; set; }
-        public string kod_pocztowy { get; set; }
-        public string miasto { get; set; }
+
+        [Required, StringLength(50)]
+        public string Name { get; set; }
+
+        [Required, StringLength(50)]
+        public string Street { get; set; }
+
+        [Required]
+        public string HouseNumber { get; set; }
+
+        [Required, RegularExpression(@"[0-9][0-9][-][0-9][0-9][0-9]")]
+        public string PostalCode { get; set; }
+
+        [Required, StringLength(50)]
+        public string City { get; set; }
     }
 }

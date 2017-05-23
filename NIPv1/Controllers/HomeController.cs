@@ -13,10 +13,13 @@ namespace NIPv1.Controllers
 {
     public class HomeController : Controller
     {
-        private DataContext db = new DataContext();
+        private DataContext dataContext;
+
+
         public ActionResult Index()
         {
-            return View(db.Stats.ToList());
+            dataContext = new DataContext();
+            return View(dataContext.Statistics);
         }
         
     }

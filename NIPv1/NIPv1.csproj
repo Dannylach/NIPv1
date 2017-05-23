@@ -164,7 +164,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Data.cs" />
-    <Compile Include="Models\Stat.cs" />
+    <Compile Include="Models\Statistics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

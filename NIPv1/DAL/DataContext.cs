@@ -13,7 +13,7 @@ namespace NIPv1.DAL
         public DataContext() : base("DataContext") {}
 
         public DbSet<Data> Datas { get; set; }
-        public DbSet<Stat> Stats { get; set; }
+        public DbSet<Statistics> Statistics { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
