@@ -111,6 +111,5 @@ D:\Projekty\C#\Web\Aveneo\Tasks\NIPv1\NIPv1\bin\System.Web.WebPages.Deployment.x
 D:\Projekty\C#\Web\Aveneo\Tasks\NIPv1\NIPv1\bin\System.Web.WebPages.Razor.xml
 D:\Projekty\C#\Web\Aveneo\Tasks\NIPv1\NIPv1\bin\Antlr3.Runtime.pdb
 D:\Projekty\C#\Web\Aveneo\Tasks\NIPv1\NIPv1\bin\Newtonsoft.Json.xml
-D:\Projekty\C#\Web\Aveneo\Tasks\NIPv1\NIPv1\obj\Debug\NIPv1.csprojResolveAssemblyReference.cache
 D:\Projekty\C#\Web\Aveneo\Tasks\NIPv1\NIPv1\obj\Debug\NIPv1.dll
 D:\Projekty\C#\Web\Aveneo\Tasks\NIPv1\NIPv1\obj\Debug\NIPv1.pdb

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using NIPv1.Validators;
 
 namespace NIPv1.Models
 {
@@ -8,13 +9,15 @@ namespace NIPv1.Models
     {
         [Key]
         public int CompanyId { get; set; }
-
+    
+        [Nip]
         [StringLength(10, MinimumLength = 10)]
         public string NIP { get; set; }
 
         [StringLength(10, MinimumLength = 10)]
         public string KRS { get; set; }
 
+        [Regon]
         [StringLength(10, MinimumLength = 10)]
         public string REGON { get; set; }
 
@@ -33,4 +36,5 @@ namespace NIPv1.Models
         [Required, StringLength(50)]
         public string City { get; set; }
     }
+
 }

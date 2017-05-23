@@ -11,7 +11,7 @@ namespace NIPv1.Models
     {
         [Key]
         public int SearchId { get; set; }
-
+        
         [Required, StringLength(10, MinimumLength = 10)]
         public string Number { get; set; }
 
