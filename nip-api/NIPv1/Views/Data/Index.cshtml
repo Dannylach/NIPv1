@@ -1,0 +1,56 @@
+﻿@using System.Web.Services.Protocols
+@model NIPv1.Entities.CompanyEntity
+
+@{
+    ViewBag.Title = "Dane";
+}
+
+<h2 align="center">Wyszukiwanie</h2>
+
+@using (Html.BeginForm("Index", "Data", FormMethod.Get))
+{
+        <p align="center">
+            Wyszukaj po NIP/KRS/REGON: @Html.TextBox("searchNumber", ViewBag.CurrentFilter as string,
+                                  new
+                                  {
+                                      @class = "form-control",
+                                      @title = @"Przykładowy nr NIP pobierający poprawne dane to 777-777-77-77, 
+                                               można go wpisać w dowolnym formacie
+                                               (np. format europejski PL7777777777 lub format bez myślników 7777777777).",
+                                      @pattern = @"[A-Za-z]{0,3}[0-9]{10}|[0-9]{3}[-][0-9]{3}[-][0-9]{2}[-][0-9]{2}|[0-9]{7}|[0-9]{14}|[KRS][0-9]{10}"
+                                  })
+            <input type="submit" value="Pobierz dane" />
+        </p>
+}
+<p align="center">@ViewBag.ErrorMessage</p>
+
+<center>
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Nip)</th>
+            <th>@Html.DisplayNameFor(model => model.Krs)</th>
+            <th>@Html.DisplayNameFor(model => model.Regon)</th>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.Street)</th>
+            <th>@Html.DisplayNameFor(model => model.HouseNumber)</th>
+            <th>@Html.DisplayNameFor(model => model.PostalCode)</th>
+            <th>@Html.DisplayNameFor(model => model.City)</th>
+            <th>@Html.DisplayNameFor(model => model.Rating)</th>
+        </tr>
+        @if (Model != null){
+            <tr>
+                <td>@Html.DisplayFor(modelItem => modelItem.Nip)</td>
+                <td>@Html.DisplayFor(modelItem => modelItem.Krs)</td>
+                <td>@Html.DisplayFor(modelItem => modelItem.Regon)</td>
+                <td>@Html.DisplayFor(modelItem => modelItem.Name)</td>
+                <td>@Html.DisplayFor(modelItem => modelItem.Street)</td>
+                <td>@Html.DisplayFor(modelItem => modelItem.HouseNumber)</td>
+                <td>@Html.DisplayFor(modelItem => modelItem.PostalCode)</td>
+                <td>@Html.DisplayFor(modelItem => modelItem.City)</td>
+                <td>@Html.DisplayFor(modelItem => modelItem.Rating)</td>
+            </tr>
+        }
+    </table>
+</center>
+    
+
